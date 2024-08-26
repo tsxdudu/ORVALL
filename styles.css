@@ -12,8 +12,7 @@ body {
 }
 
 header {
-    background-image: url(./imgs/cena-tranquila-de-agua-corrente-no-deserto-gerada-por-ia.jpg);
-    background-color: #fff;
+    background-color: #ffffff00;
     padding: 20px 0;
     position: fixed;
     top: 0;
@@ -83,7 +82,7 @@ ul li a::before {
     background: linear-gradient(120deg, #ffffff, #ffffff, #fcfcff, #ffffff);
     z-index: -1;
     transition: all 0.5s ease;
-    border-radius: 10px; /* Borda arredondada para a animação */
+    border-radius: 10vh;
     transform: scale(0);
     transform-origin: center;
 }
@@ -113,13 +112,16 @@ ul li a::before {
 }
 
 .hero {
-    background-image: url('./imgs/cena-tranquila-de-agua-corrente-no-deserto-gerada-por-ia.jpg');
+    background-image: url(./imgs/pexels-sitthan-kutty-322985-913807.png);
     background-size: cover;
     background-position: center;
-    min-height: 400px;
+    height: 60vh;
     padding: 100px 0;
     text-align: center;
     color: #fff;
+    border-bottom-left-radius: 10vh;
+    border-bottom-right-radius: 10vh;
+
 }
 
 .hero-content {
@@ -128,26 +130,25 @@ ul li a::before {
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 70px;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .btn{
-    background-color: #643815;
+    background: linear-gradient(#72E04A, #3CBD01);
+    border: none;
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px 30px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 20px;
+    font-size: 20px;
+    border-radius: 15px;
     cursor: pointer;
     margin-top: 150px;
 }
 
 .features {
-    background-image: url('./imgs/cena-tranquila-de-agua-corrente-no-deserto-gerada-por-ia.jpg');
     padding: 50px 0;
 }
 
@@ -164,7 +165,6 @@ ul li a::before {
 }
 
 .rating {
-    background-image: url('./imgs/cena-tranquila-de-agua-corrente-no-deserto-gerada-por-ia.jpg');
     background-color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -185,8 +185,7 @@ ul li a::before {
 }
 
 footer {
-    background-image: url('./imgs/cena-tranquila-de-agua-corrente-no-deserto-gerada-por-ia.jpg');
-    background-color: #ffffff;
+    background-color: #000000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
