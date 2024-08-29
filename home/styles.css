@@ -91,7 +91,7 @@ ul li a {
     z-index: 1;
     overflow: hidden;
     transition: color 0.5s ease;
-    border-radius: 10px; /* Borda arredondada para o link */
+    border-radius: 10px;
 }
 
 ul li a::before {
