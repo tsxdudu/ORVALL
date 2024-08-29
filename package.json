@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
-
   "scripts": {
     "start": "live-server"
   },
-
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "live-server": "^1.2.2"
   },
-
   "keywords": []
 }
