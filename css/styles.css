@@ -16,16 +16,14 @@ body{
 }
 
 :root{
-    --verde-claro: #ffda07;
-    --verde: #2f9364;
-    --orage: #ac6b0a;
-    --degrade-bnt: linear-gradient(#a77509, #df730e);
+    --main-color: #000000;
+    --main-degrade: linear-gradient(#f8ad09, #ffc400);
     --color-p: #a1a1a1;
     --color-p-2: #868585;
 }
 
-.background-verde{
-    background-color: var(--verde-claro);
+.background-hero{
+    background-color: var(--main-color);
     height: 87vh;
 }
 
@@ -33,14 +31,17 @@ body{
     max-width: 1440px;
     padding: 0 5%;
     margin: 0 auto;
+    background-color: var(--main-color);
+
 }
-.bnt-gradient{
+
+.my-btn-gradient{
     padding: 10px 25px;
     color: rgb(255, 251, 251);
     border-radius: 15px;
     border: none;
     cursor: pointer;
-    background-image: var(--degrade-bnt);
+    background-image: var(--main-degrade);
 }
 nav{
     display: flex;
@@ -53,6 +54,7 @@ nav{
     font-weight: bold;
     color: white;
     direction: none;
+    text-decoration: none;
 }
 .ul{
     display: flex;
@@ -64,11 +66,11 @@ nav{
 }
 .ul li a{
     color: white;
-
+    text-decoration: none;
 }
 
 main .container{
-    background-color: #ffda07;
+    background-color: var(--main-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -90,15 +92,16 @@ main .container{
     display: flex;
     align-items: center;
     margin-top: 20px;
-}  
+}
 
-.main-img{  
+.main-material{  
     margin-top: 7em;
     width: 50%;
 }
 
-.main-img img{
+.main-material video{
     width: 100%;
+    border-radius: 20px;
 }
 
 .menu-icon{
@@ -135,7 +138,7 @@ main .container{
     main .container{
         flex-direction: column;
     }
-    main .container .main-img,
+    main .container .main-video,
     main .container .main-text{
         width: 100%;
         text-align: center;

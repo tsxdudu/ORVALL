@@ -5,7 +5,7 @@ Rode o comando:
 ```
 npm install live-server
 ```
-e
+## Iniciando a Aplicação
 ```
 npm start
 ```
