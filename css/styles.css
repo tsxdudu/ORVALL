@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+     list-style: none;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --verde-claro: #ffda07;
+    --verde: #2f9364;
+    --orage: #ac6b0a;
+    --degrade-bnt: linear-gradient(#a77509, #df730e);
+    --color-p: #a1a1a1;
+    --color-p-2: #868585;
+}
+
+.background-verde{
+    background-color: var(--verde-claro);
+    height: 87vh;
+}
+
+.container{
+    max-width: 1440px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+.bnt-gradient{
+    padding: 10px 25px;
+    color: rgb(255, 251, 251);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    background-image: var(--degrade-bnt);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.my-logo a{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    direction: none;
+}
+.ul{
+    display: flex;
+    align-items: center;
+}
+.ul li{
+    margin: 0 35px;
+    font-size: 20px;
+}
+.ul li a{
+    color: white;
+
+}
+
+main .container{
+    background-color: #ffda07;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-text{
+    margin-top: 5em;
+    width: 50%;
+    color: white;
+}
+.main-text h1{
+    font-size: 4.5rem;
+}
+.main-text button{
+    margin-left: 8em;
+    font-size: 1em;
+}
+.main-text div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}  
+
+.main-img{  
+    margin-top: 7em;
+    width: 50%;
+}
+
+.main-img img{
+    width: 100%;
+}
+
+.menu-icon{
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 980px){
+    .menu-icon{
+        display: block;
+    }
+    .ul{
+        position: fixed;
+        background-color: rgb(156, 142, 62);
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ul li{
+        font-size: 30px;
+        margin: 20px 0;
+    }
+    .ul.ativo{
+        left: 0;
+    }
+    .bnt-gradient{
+        font-size: 30px;
+    }
+    main .container{
+        flex-direction: column;
+    }
+    main .container .main-img,
+    main .container .main-text{
+        width: 100%;
+        text-align: center;
+        margin-right: 2em;
+    }
+    main .container .main-text h1{
+        font-size: 4rem;
+    }
+    main .container .main-text div{
+        justify-content: center;
+        margin-right: 4em;
+    }
+}
+
+@media (max-width: 470px){
+    main .container .main-text h1{
+        font-size: 2rem;
+    }
+    main .container .main-text div{
+        justify-content: center;
+        margin-right: 4em;
+    }
+}
