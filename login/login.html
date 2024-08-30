@@ -5,10 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="/styles/login.css">
   <title>Tela Login</title>
-  <meta name="google-signin-client_id" content="PREENCHA AQUIIII">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -22,12 +20,8 @@
         <div class="social-container">
           <div class="g-signin2" data-onsuccess="onSignIn"></div>
         </div>
-        <div class="social-container">
-          <iconify-icon icon="ri:linkedin-fill"></iconify-icon>
-        </div>
       </div>
       <div class="form">
-        <span class="subtitle">ou use a sua conta</span>
         <input class="form-field" type="text" placeholder="Email">
         <input class="form-field" type="password" placeholder="Senha">
         <div class="actions">
@@ -41,18 +35,8 @@
     <section class="form-section" id="sign-up">
       <h1 class="title">Criar Conta</h1>
       <div class="social">
-        <div class="social-container">
-          
-        </div>
-        <div class="social-container">
-          <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        </div>
-        <div class="social-container">
-         
-        </div>
       </div>
       <div class="form">
-        <span class="subtitle">ou utilize o seu email</span>
         <input class="form-field" type="text" placeholder="Nome">
         <input class="form-field" type="text" placeholder="Email">
         <input class="form-field" type="password" placeholder="Senha">
@@ -78,23 +62,6 @@
 
   <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
   <script src="./login.js"></script>
-  
-  <script>
-    function onSignIn(googleUser) {
-      var profile = googleUser.getBasicProfile();
-      console.log('ID: ' + profile.getId());
-      console.log('Name: ' + profile.getName());
-      console.log('Image URL: ' + profile.getImageUrl());
-      console.log('Email: ' + profile.getEmail());
-    }
-
-    function signOut() {
-      var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function () {
-        console.log('User signed out.');
-      });
-    }
-  </script>
 </body>
 
 </html>
