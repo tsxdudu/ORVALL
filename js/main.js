@@ -1,15 +1,12 @@
-var menuIcon = document.querySelector('.menu-icon');
-var ul = document.querySelector('.ul');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.querySelector('.menu-icon');
+    const ul = document.querySelector('.ul');
+    const body = document.querySelector('body');
 
-menuIcon.addEventListener('click',()=>{
-
-    if (ul.classList.contains('ativo')) {
-        ul.classList.remove('ativo');
-        document.querySelector('.menu-icon img').src = 'img/menu.png';
-    } else {
-        ul.classList.add('ativo');
-        document.querySelector('.menu-icon img').src = 'img/close.png';
+    if (menuIcon) {
+        menuIcon.addEventListener('click', function() {
+            ul.classList.toggle('ativo');
+            body.classList.toggle('no-scroll');
+        });
     }
-
-})
-
+});
