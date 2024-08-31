@@ -27,7 +27,7 @@ body{
     height: 87vh;
 }
 
-.container{
+.my-container{
     max-width: 1440px;
     padding: 0 5%;
     margin: 0 auto;
@@ -69,7 +69,7 @@ nav{
     text-decoration: none;
 }
 
-main .container{
+.my-container{
     background-color: var(--main-color);
     display: flex;
     align-items: center;
@@ -135,30 +135,62 @@ main .container{
     .bnt-gradient{
         font-size: 30px;
     }
-    main .container{
+    main .my-container{
         flex-direction: column;
     }
-    main .container .main-video,
-    main .container .main-text{
+    main .my-container .main-video,
+    main .my-container .main-text{
         width: 100%;
         text-align: center;
         margin-right: 2em;
     }
-    main .container .main-text h1{
+    main .my-container .main-text h1{
         font-size: 4rem;
     }
-    main .container .main-text div{
+    main .my-container .main-text div{
         justify-content: center;
         margin-right: 4em;
     }
 }
 
 @media (max-width: 470px){
-    main .container .main-text h1{
+    main .my-container .main-text h1{
         font-size: 2rem;
     }
-    main .container .main-text div{
+    main .my-container .main-text div{
         justify-content: center;
         margin-right: 4em;
     }
+}
+
+.card{
+    background-color: rgb(221, 219, 215);
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    border-radius: 2em;
+    margin: 10px;
+    height: 450px;
+    border: none;
+}
+
+.card .card-footer{
+    border: none;
+    background-color: #ffffff00;
+}
+
+.col-sm .card-body{
+    height: 300px;
+}
+
+.card-title{
+    padding-bottom: 10px;
+}
+
+.gold{
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+.price{
+    padding: 0px;
 }
