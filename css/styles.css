@@ -14,6 +14,8 @@ body {
 
 :root {
     --main-color: #000000;
+    --secundary-color: rgb(37, 37, 37);
+    --card-color: rgb(221, 219, 215);
     --main-degrade: linear-gradient(#f8ad09, #ffc400);
     --color-p: #a1a1a1;
     --color-p-2: #868585;
@@ -148,29 +150,6 @@ nav {
     width: 50%;
 }
 
-.sobre .sobre-img img{
-    width: 130%;
-    border-radius: 20px;
-    margin-left: -15em;
-    margin-top: 20px;
-}
-.sobre .sobre-text{
-    width: 50%;
-    padding-left: 9px;
-}
-.sobre .sobre-text h2{
-    font-size: 2.5em;
-    font-weight: 650;
-}
-.sobre .sobre-text p{
-    margin: 20px 0;
-    color:var(--color-p)
-}
-.sobre .sobre-text p b{
-    color: black;
-    font-size: 30px;
-}
-/* Responsividade */
 @media (max-width: 1366px) {
     .menu-icon {
         display: block;
@@ -274,7 +253,23 @@ nav {
     color: white;
 }
 
-.price {
-    padding: 0;
+.price{
+    padding: 0px;
 }
 
+
+/* Footer */
+footer{
+    color: white;
+    padding: 10px;
+    background-color: var(--main-color);
+}
+
+footer a{
+    color: white;
+}
+
+footer .footer-title{
+    padding-top: 10px;
+    size: 20px;
+}
