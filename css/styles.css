@@ -85,12 +85,13 @@ nav {
     height: 2px;
     background-color: white;
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: right;
     transition: transform 0.4s ease-in-out;
 }
 
 .ul li a:not(.no-line):hover::after {
     transform: scaleX(1);
+    transform-origin: right;
     transform-origin: left;
 }
 
@@ -138,6 +139,37 @@ nav {
     z-index: 1000; 
 }
 
+.sobre .container{
+    display: flex;
+    align-items: center;
+}
+
+.sobre .sobre-img{
+    width: 50%;
+}
+
+.sobre .sobre-img img{
+    width: 130%;
+    border-radius: 20px;
+    margin-left: -15em;
+    margin-top: 20px;
+}
+.sobre .sobre-text{
+    width: 50%;
+    padding-left: 9px;
+}
+.sobre .sobre-text h2{
+    font-size: 2.5em;
+    font-weight: 650;
+}
+.sobre .sobre-text p{
+    margin: 20px 0;
+    color:var(--color-p)
+}
+.sobre .sobre-text p b{
+    color: black;
+    font-size: 30px;
+}
 /* Responsividade */
 @media (max-width: 1366px) {
     .menu-icon {
@@ -245,3 +277,4 @@ nav {
 .price {
     padding: 0;
 }
+
