@@ -12,16 +12,16 @@
         <header>
             <div class="container">
                 <nav>
-                    <div class="my-logo">
+                    <div class="my-logo fade-in">
                         <a href="index.html">ORV<strong>ALL</strong></a>
                     </div>
                     <ul class="ul">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Valores</a></li>
-                        <li><a href="#">Duvidas</a></li>
-                        <li><a href="#" class="no-line"><button class="my-btn-gradient">Login</button></a></li>
+                        <li class="fade-in"><a href="#">Home</a></li>
+                        <li  class="fade-in"><a href="#sobre">Sobre</a></li>
+                        <li  class="fade-in"><a href="#Serviços">Serviços</a></li>
+                        <li  class="fade-in"><a href="#">Valores</a></li>
+                        <li  class="fade-in"><a href="#">Duvidas</a></li>
+                        <li><a href="#" class="no-line "><button class="my-btn-gradient btn btn-outline-warning fade-in">Login</button></a></li>
                     </ul>
                     <div class="menu-icon">
                         <img src="/img/menu.png" alt="Menu">
@@ -33,20 +33,20 @@
         <main>
             <div class="my-container">
                 <div class="main-text">
-                    <h1>O MELHOR <strong>SERVIÇO</strong> METEOROLÓGICO</h1>
+                    <h1 class="fade-in">O MELHOR <strong>SERVIÇO</strong> METEOROLÓGICO</h1>
                     <div>
-                        <button class="my-btn-gradient">Obtenha Agora!</button>
-                        <img src="/img/verificado.png" alt="verificado">
+                        <button class="my-btn-gradient btn btn-outline-warning fade-in">Obtenha Agora!</button>
+                        <img class="fade-in" src="/img/verificado.png" alt="verificado">
                     </div>
                 </div>
                 <div class="main-material">
-                    <video src="./img/Gravação de tela de 2024-08-30 19-21-40.webm" class="object-fit-contain" autoplay muted></video>
+                    <video src="./img/Gravação de tela de 2024-08-30 19-21-40.webm" class="object-fit-contain " autoplay muted></video>
                 </div>
             </div>
         </main>
     </div>  
 
-    <section class="sobre py-5" id="sobre">
+    <section class="sobre py-5 fade-in" id="sobre">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-4">
@@ -81,17 +81,73 @@
             </div>
         </div>
     </section>
+
+
+    <section class="Serviços" id="Serviços">
+        <div class="container">
+            <h1 class="text-center font fade-in">Serviços</h1>
+            <div class="card-group">
+                <div class="card fade-in">
+                  <img src="./img/image.png" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Previsão Precisa do Tempo</h5>
+                    <p class="card-text">Projeções meteorológicas detalhadas e precisas que ajudam na tomada de 
+                        decisões para diversas atividades, como agricultura, construção civil e eventos ao ar livre..</p>
+                  </div>
+                </div>
+                <div class="card fade-in">
+                  <img src="./img/banner-9-1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Monitoramento Climático em Tempo Real</h5>
+                    <p class="card-text"> Acesso a dados meteorológicos atualizados continuamente, incluindo temperatura, 
+                        umidade, pressão atmosférica, velocidade e direção do vento, entre outros..</p>
+                  </div>
+                </div>
+                <div class="card fade-in">
+                  <img src="./img/simbolo-de-aviso-de-triangulo-amarelo-perigo-cuidado-risco-icone-de-trafego-fundo-renderizacao-em-3d_56104-1156.avif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Alertas de Condições Severas</h5>
+                    <p class="card-text"> Sistema de alerta rápido para condições climáticas severas, como tempestades, 
+                        ventanias ou calor extremo, permitindo que os clientes se preparem com antecedência.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-group">
+                <div class="card fade-in">
+                  <img src="./img/relatorio.webp" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Relatórios Personalizados</h5>
+                    <p class="card-text">Geração de relatórios meteorológicos personalizados para necessidades específicas, 
+                        como planejamento de colheitas, análise de impacto climático em obras ou gerenciamento de logística.</p>
+                   
+                  </div>
+                </div>
+                <div class="card fade-in">
+                  <img src="./img/grafico.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Análise Histórica de Dados Meteorológicos</h5>
+                    <p class="card-text"> Acesso a dados históricos para análise de tendências climáticas, auxiliando em decisões estratégicas de longo prazo</p>
+
+                  </div>
+                </div>
+                <div class="card fade-in">
+                  <img src="./img/integracao-de-plataforma.jpeg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Integração com Aplicativos e Plataformas</h5>
+                    <p class="card-text">Compatibilidade com aplicativos móveis e plataformas web, permitindo que os dados sejam acessados facilmente de qualquer lugar.</p>
     
-    
-    
-        
-       
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
     <section class="resultados"></section>
     <div class="container text-center content">
         <div class="row justify-content-center">
             <div class="col col-lg-5 col-8 col-xl-4 col-md-7">
-                <div class="card bronze">
-                    <div class="card-body">
+                <div class="card bronze fade-in">
+                    <div class="card-body ">
                         <h5 class="card-title display-6"><strong>Plano Bronze</strong></h5>
                         <div class="container text-center">
                             <div class="row price">
@@ -116,7 +172,7 @@
                 </div>
             </div>
             <div class="col col-lg-5 col-8 col-xl-4 col-md-7">
-                <div class="card gold">
+                <div class="card gold fade-in">
                     <div class="card-body">
                         <h5 class="card-title display-6"><strong>Plano Ouro</strong></h5>
                         <div class="container text-center">
@@ -137,13 +193,13 @@
                         <p class="card-text">- Instalação gratuita</p>
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn my-btn-gradient">Selecionar</a>
+                        <a href="#" class="btn my-btn-gradiente">Selecionar</a>
                     </div>
                 </div>
             </div>
             <div class="col col-lg-5 col-8 col-xl-4 col-md-7">
                 <!---->
-                <div class="card gold">
+                <div class="card prata fade-in">
                     <div class="card-body">
                         <h5 class="card-title display-6"><strong>Plano Prata</strong></h5>
                         <div class="container text-center">
@@ -241,7 +297,7 @@
             <div class="col-4 col-md-2 text-start">
                 <p class="footer-title"><strong>Redes Sociais</strong></p>
                 <div class="row">
-                    <!--Instagram-->
+    
                     <div class="col-4 col-md-4">
                         <a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -251,7 +307,7 @@
                             </svg>
                         </a>
                     </div>
-                    <!--GitHub-->
+            
                     <div class="col-4 col-md-4">
                         <a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -261,7 +317,7 @@
                             </svg>
                         </a>
                     </div>
-                    <!--Whatsapp-->
+                
                     <div class="col-4 col-md-4">
                         <a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"

@@ -8,8 +8,29 @@
     list-style: none;
 }
 
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    height: 70px; 
+    display: flex;
+    align-items: center; 
+    padding: 0 20px;
+    z-index: 1050;
+}
+
+
+.container.content {
+    margin-top: 90px; 
+}
+
+
+
 body {
     font-family: "Poppins", sans-serif;
+    padding-top: 70px;
 }
 
 :root {
@@ -17,6 +38,7 @@ body {
     --secundary-color: rgb(37, 37, 37);
     --card-color: rgb(221, 219, 215);
     --main-degrade: linear-gradient(#f8ad09, #ffc400);
+    --main-degrade2: linear-gradient(#e2dada, #ffffff);
     --color-p: #a1a1a1;
     --color-p-2: #868585;
 }
@@ -43,6 +65,14 @@ body {
     border: none;
     cursor: pointer;
     background-image: var(--main-degrade);
+}
+.my-btn-gradiente{
+    padding: 10px 30px;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background-image: var(--main-degrade2);
 }
 
 nav {
@@ -141,6 +171,7 @@ nav {
     z-index: 1000; 
 }
 
+
 .sobre .container{
     display: flex;
     align-items: center;
@@ -151,12 +182,21 @@ nav {
 }
 
 @media (max-width: 1366px) {
+
+    header {
+        height: 90px; 
+    }
+
+    .container.content {
+        margin-top: 110px;
+    }
+
     .menu-icon {
         display: block;
     }
     .ul {
         position: fixed;
-        background-color: rgb(156, 142, 62);
+        background-color: rgb(0, 0, 0);
         top: 0;
         width: 100%;
         height: 100%;
@@ -167,8 +207,13 @@ nav {
         z-index: 1050;
     }
     .ul li {
+        margin-right: 40px;
         font-size: 30px;
         margin: 20px 0;
+    }
+
+    .ul li a{
+        margin-right: 30px;
     }
     .ul.ativo {
         left: 0;
@@ -249,16 +294,24 @@ nav {
 }
 
 .gold {
-    background-color: rgb(37, 37, 37);
-    color: white;
+    background-color:  #ffd700
 }
+.prata{
+    background-color: #a39f9f;
 
+}
+.bronze{
+    background-color: rgb(175, 147, 109);
+}
 .price{
     padding: 0px;
 }
 
+.font{
+    font-size: 4rem;
+}
 
-/* Footer */
+
 footer{
     color: white;
     padding: 10px;
@@ -273,3 +326,14 @@ footer .footer-title{
     padding-top: 10px;
     size: 20px;
 }
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; 
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+  }
+  
