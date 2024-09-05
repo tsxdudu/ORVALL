@@ -26,8 +26,6 @@ header {
     margin-top: 90px; 
 }
 
-
-
 body {
     font-family: "Poppins", sans-serif;
     padding-top: 70px;
@@ -66,6 +64,7 @@ body {
     cursor: pointer;
     background-image: var(--main-degrade);
 }
+
 .my-btn-gradiente{
     padding: 10px 30px;
     color: rgb(0, 0, 0);
@@ -276,7 +275,7 @@ nav {
     padding-bottom: 5vh;
     border-radius: 2em;
     margin: 10px;
-    height: 450px;
+    height: fit-content;
     border: none;
 }
 
@@ -330,7 +329,7 @@ footer .footer-title{
 
 .fade-in {
     opacity: 0;
-    transition: opacity 1.5s ease-in-out; 
+    transition: opacity 0.5s ease-in-out; 
   }
   
   .fade-in.visible {
