@@ -32,9 +32,6 @@ h1 {
 
 body {
 
-    .dashboard-title {
-        
-    }
     font-family: 'Poppins', sans-serif;
 }
 
@@ -338,10 +335,6 @@ canvas {
 
 iframe {
     border-radius: 5px !important;
-}
-
-.dashboard-title {
-    
 }
 
 .first-row {
