@@ -11,11 +11,6 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -104,18 +99,18 @@
             <span>Cofiguração</span>
           </a>
         </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open"
+              viewBox="0 0 16 16">
+              <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
+              <path
+                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z" />
+            </svg>
+            <span>Sair</span>
+          </a>
+        </li>
       </ul>
-      <div class="sidebar-footer">
-        <a href="#" class="sidebar-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open"
-            viewBox="0 0 16 16">
-            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
-            <path
-              d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117M11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5M4 1.934V15h6V1.077z" />
-          </svg>
-          <span>Sair</span>
-        </a>
-      </div>
     </aside>
 
 
@@ -126,130 +121,223 @@
 
 
     <div class="main p-3">
-      <div class="container">
-        <div class="text-center">
-          <h1 id="city">ORVALL</h1>
-          <h1 class="city title" >Cidade</h1>
-
-        </div>
-        <div id="map"></div>
-
-        <div class="centralizer-data">
-          <div class="city-text-title">
+      <div class="container-fluid">
+        <div class="row first-row">
+          <div class="col text-start">
+            <h2 class="dashboard-title">Painel Meteorológico</h2>
           </div>
-          <div class="box featured-box">
-            <img id="weather-icon">
-            <div class="information">
-              <div>
-                <p id="temp" class="title">----</p>
-              </div>
-              <p id="weather-description"></p>
-            </div>
-          </div>
-
-            <div class="box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                class="bi bi-thermometer-sun" viewBox="0 0 16 16">
-                <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5" />
-                <path
-                  d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5" />
-              </svg>
-              <div class="information">
-                <p class="title" id="temp-max">----</p>
-                <p>Máxima</p>
-              </div>
-            </div>
-
-            <div class="box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                class="bi bi-thermometer-snow" viewBox="0 0 16 16">
-                <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585A1.5 1.5 0 0 1 5 12.5" />
-                <path
-                  d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1.293l.646-.647a.5.5 0 0 1 .708.708L9 5.207v1.927l1.669-.963.495-1.85a.5.5 0 1 1 .966.26l-.237.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.884.237a.5.5 0 1 1-.26.966l-1.848-.495L9.5 8l1.669.963 1.849-.495a.5.5 0 1 1 .258.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.237.883a.5.5 0 1 1-.966.258L10.67 9.83 9 8.866v1.927l1.354 1.353a.5.5 0 0 1-.708.708L9 12.207V13.5a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5" />
-              </svg>
-              <div class="information">
-                <p class="title" id="temp-min">----</p>
-                <p>Mínima</p>
-              </div>
-            </div>
-
-          <div class="box">
-            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-              class="bi bi-droplet-fill" viewBox="0 0 16 16">
-              <path
-                d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6M6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13" />
-            </svg>
-            <div class="information">
-              <p class="title" id="humidity">---</p>
-              <p>Umidade</p>
-            </div>
-          </div>
-
-            <div class="box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-wind"
+          <div class="col text-end">
+            <button id="download" class="download my-btn-gradient btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download"
                 viewBox="0 0 16 16">
                 <path
-                  d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5" />
-              </svg>
-              <div class="information">
-                <p class="title" id="speed">---</p>
-                <p>Vel. Ar</p>
-              </div>
-            </div>
-
-            <div class="box">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                class="bi bi-cloud-fill" viewBox="0 0 16 16">
+                  d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
                 <path
-                  d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383" />
+                  d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
               </svg>
-              <div class="information">
-                <p class="title" id="clouds">---</p>
-                <p>Nuvens</p>
+              <span>Abaixar Dados</span>
+            </button>
+          </div>
+        </div>
+        <h3 id="city" class="city">Estação</h3>
+
+        <div class="row">
+          <div class="col-xxl-7 col-md-12">
+            <div id="map" class="shadow"></div>
+          </div>
+          <div class="col-xxl-5 col-md-12">
+            <div class="card shadow w-100">
+              <div class="card-header">
+                <h4>Dados Climáticos</h4>
               </div>
-            </div>
-          <div class="container-fluid charts align-items-center justify-content-center">
-            <div class="row">
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-              </div>
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&type=line"></iframe>
-              </div>
-            </div>
-            <div class="row">
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-              </div>
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-              </div>
-            </div>
-            <div class="row">
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-              </div>
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/7?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-              </div>
-            </div>
-            <div class="row">
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-              </div>
-              <div class="chart col-lg-6 col-md-6 col-sm-12 mb-3">
-                <iframe class="w-100" height="260" style="border: 1px solid #cccccc;"
-                  src="https://thingspeak.com/channels/2349060/charts/8?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+              <div class="card-body">
+                <canvas id="climateChart"></canvas>
               </div>
             </div>
           </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+          const ctx = document.getElementById('climateChart').getContext('2d');
+          const climateChart = new Chart(ctx, {
+            type: 'bar', // Tipo de gráfico (pode ser 'bar', 'pie', etc.)
+            data: {
+              labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Meses
+              datasets: [{
+                label: 'Temperatura (°C)',
+                data: [22, 25, 28, 30, 27, 24, 23], // Dados de exemplo
+                borderColor: '#d62020', // Cor da linha (vermelha)
+        backgroundColor: 'rgba(255, 99, 132, 0.2)', 
+            
+                fill: true,
+              }]
+            },
+            options: {
+              responsive: true,
+              
+              scales: {
+                y: {
+                  beginAtZero: true
+                }
+              }
+            }
+          });
+        </script>
+
+
+
+        <div class="centralizer-data">
+
+
+          <div class="row row-box justify-content-center">
+            <div class="container container-box col-xl-2 col-md-6 col-sm-12 mb-3">
+              <div class="box shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                  class="bi bi-thermometer-sun" viewBox="0 0 16 16">
+                  <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5" />
+                  <path
+                    d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5" />
+                </svg>
+                <div class="information">
+                  <p class="title" id="temp-max">----</p>
+                  <p>Máxima</p>
+                </div>
+              </div>
+            </div>
+            <div class="container container-box col-xl-2 col-md-6 col-sm-12 mb-3">
+              <div class="box shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                  class="bi bi-thermometer-snow" viewBox="0 0 16 16">
+                  <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585A1.5 1.5 0 0 1 5 12.5" />
+                  <path
+                    d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1.293l.646-.647a.5.5 0 0 1 .708.708L9 5.207v1.927l1.669-.963.495-1.85a.5.5 0 1 1 .966.26l-.237.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.884.237a.5.5 0 1 1-.26.966l-1.848-.495L9.5 8l1.669.963 1.849-.495a.5.5 0 1 1 .258.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.237.883a.5.5 0 1 1-.966.258L10.67 9.83 9 8.866v1.927l1.354 1.353a.5.5 0 0 1-.708.708L9 12.207V13.5a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5" />
+                </svg>
+                <div class="information">
+                  <p class="title" id="temp-min">----</p>
+                  <p>Mínima</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container container-box col-xl-2 col-md-12 col-sm-12 mb-3">
+              <div class="box shadow featured-box">
+                <img id="weather-icon">
+                <div class="information">
+                  <div>
+                    <p id="temp" class="title">----</p>
+                  </div>
+                  <p id="weather-description"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container container-box col-xl-2 col-md-6 col-sm-12 mb-3">
+              <div class="box shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                  class="bi bi-droplet-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 16a6 6 0 0 0 6-6c0-1.655-1.122-2.904-2.432-4.362C10.254 4.176 8.75 2.503 8 0c0 0-6 5.686-6 10a6 6 0 0 0 6 6M6.646 4.646l.708.708c-.29.29-1.128 1.311-1.907 2.87l-.894-.448c.82-1.641 1.717-2.753 2.093-3.13" />
+                </svg>
+                <div class="information">
+                  <p class="title" id="humidity">---</p>
+                  <p>Umidade</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="container container-box col-xl-2 col-md-6 col-sm-12 mb-3">
+
+              <div class="box shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-wind"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5" />
+                </svg>
+                <div class="information">
+                  <p class="title" id="speed">---</p>
+                  <p>Vel. Ar</p>
+                </div>
+              </div>
+            </div>
+            <div class="container-box col-xl-2 col-md-6 col-sm-12 mb-3">
+              <div class="box shadow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                  class="bi bi-cloud-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383" />
+                </svg>
+                <div class="information">
+                  <p class="title" id="clouds">---</p>
+                  <p>Nuvens</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+<style>
+
+    .row-chart {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centraliza as colunas */
+    }
+
+    .chart {
+        display: flex; /* Flexbox para o contêiner do iframe */
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 100%; /* Garante que o contêiner tenha altura para centralização */
+    }
+</style>
+
+          <div class="charts justify-content-center">
+            <div class="row row-chart d-flex">
+              <div class="col-xxl-4 col-lg-6 col-sm-12 mb-3">
+                <div class="chart">
+                  <iframe class="shadow" width="450" height="260"
+                    src="https://thingspeak.com/channels/2349060/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-lg-6 col-sm-12 mb-3">
+
+                <div class="chart">
+                  <iframe class="shadow" width="450" height="260" 
+                    src="https://thingspeak.com/channels/2349060/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&type=line"></iframe>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-lg-6 col-sm-12 mb-3">
+                <div class="chart">
+                  <iframe class="shadow" width="450" height="260"
+                    src="https://thingspeak.com/channels/2349060/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-lg-6 col-sm-12 mb-3">
+                <div class="chart">
+                  <iframe class="shadow" width="450" height="260"
+                    src="https://thingspeak.com/channels/2349060/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-lg-6 col-sm-12 mb-3">
+                <div class="chart"> 
+                  <iframe class="shadow" width="450" height="260"
+                    src="https://thingspeak.com/channels/2349060/charts/7?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+              </div>
+
+              <div class="col-xxl-4 col-lg-6 col-sm-12 mb-3">
+                <div class="chart">
+                  <iframe class="shadow" width="450" height="260"
+                    src="https://thingspeak.com/channels/2349060/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>

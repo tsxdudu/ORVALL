@@ -7,6 +7,16 @@
     padding: 0;
 }
 
+:root {
+    --main-color: #000000;
+    --secundary-color: rgb(37, 37, 37);
+    --card-color: rgb(221, 219, 215);
+    --main-degrade: linear-gradient(#f8ad09, #ffc400);
+    --main-degrade2: linear-gradient(#e2dada, #ffffff);
+    --color-p: #a1a1a1;
+    --color-p-2: #868585;
+}
+
 a {
     text-decoration: none;
 }
@@ -21,6 +31,10 @@ h1 {
 }
 
 body {
+
+    .dashboard-title {
+        
+    }
     font-family: 'Poppins', sans-serif;
 }
 
@@ -33,14 +47,14 @@ body {
     width: 100%;
     overflow: hidden;
     transition: all 0.35s ease-in-out;
-    background-color: #fafbfe;
+    background-color: #e2e2e2;
 }
 
 #sidebar {
     width: 70px;
     min-width: 70px;
     transition: all .25s ease-in-out;
-    background-color: #0e2238;
+    background-color: #090909;
     display: flex;
     flex-direction: column;
 }
@@ -98,7 +112,7 @@ a.sidebar-link {
 
 a.sidebar-link:hover {
     background-color: rgba(255, 255, 255, .075);
-    border-left: 3px solid #3b7ddd;
+    border-left: 3px solid #ffc400;
 }
 
 .sidebar-item {
@@ -108,7 +122,7 @@ a.sidebar-link:hover {
 #sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
     top: 0;
     left: 70px;
-    background-color: #0e2238;
+    background-color: #000000;
     padding: 0;
     min-width: 15rem;
     display: none;
@@ -150,40 +164,40 @@ a.sidebar-link:hover {
 
 
 
-* {
-    font-family: "Ubuntu", sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 5;
+.download {
+    border-radius: 5px !important;
 }
 
-header {
-    background-color: #272727;
-    height: 70px;
+.my-btn-gradient {
+    padding: 5px 10px;
+    color: #090909;
+    border-radius: 5px !important;
+    border: none;
+    cursor: pointer;
+    background-image: var(--main-degrade);
 }
 
-i {
-    margin: 10px;
+@keyframes animacao {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
 }
 
-p {
-    width: fit-content;
-}
-
-footer {
-    background-color: #272727;
+.my-btn-gradient:hover {
+    animation-name: animacao;
+    color: #fafafa;
+    animation-timing-function: ease;
+    animation-direction: alternate;
 }
 
 #map {
     height: 500px;
-}
+    border-radius: 5px !important;
+    margin-bottom: 10px;
 
-.area {
-    background: linear-gradient(90deg, #66a6d1, #757dd6);
-    background-repeat: no-repeat;
-    background-size: 100% 3px;
-    background-position: left bottom;
-    width: fit-content;
 }
 
 .city-text-title {
@@ -193,33 +207,43 @@ footer {
 
 .title {
     text-align: center;
-    color: #4b4b4b;
+    color: #090909;
     font-size: 30px;
     margin: 10px;
     font-weight: 700;
-    transition: all 1s ease;
+    transition: all 0.4s ease;
 
+}
+
+.row-box {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.container-box {
+    margin: 0;
+    padding: 5px;
 }
 
 .box {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e9e9e9;
-    margin: 10px;
-    color: #4b4b4b;
-    padding: 10px;
-    box-shadow: 1px 4px 5px #adadad;
+    color: #090909;
+    margin: 0;
     padding-bottom: 30px;
-    transition: all 1s ease;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 5px !important;
+
 }
 
 .box:hover {
-    color: #757dd6;
+    color: #f8ad09;
 }
 
 .box:hover .title{
-    color: #757dd6;
+    color: #f8ad09;
 }
 
 .featured-box:hover {
@@ -232,19 +256,18 @@ footer {
 
 
 .featured-box {
-    background: linear-gradient(133deg, #66a6d1, #757dd6);
+    background: linear-gradient(133deg, #f8ad09, #ffc400);
     color: #fcfcfc;
 }
 
 .featured-box .title {
     color: #fcfcfc;
-    font-size: 50px;
 }
 
 .information {
-    width: 100px;
     justify-content: center;
     align-items: center;
+    height: 100px;
 }
 
 .climate-data-area {
@@ -254,7 +277,6 @@ footer {
     display: flex;
     justify-content: center;
     height: 100%;
-    box-shadow: 1px 1px 5px #adadad;
 }
 
 .climate-data {
@@ -279,4 +301,49 @@ footer {
     color: #ebebeb;
     margin: 10px;
 
+}
+
+
+.chart {
+    padding: 0;
+    margin: 5px;
+}
+
+.charts {
+    background-color: #ececec;
+    border-radius: 5px !important;
+}
+
+.card {
+    border: none;
+    border-radius: 5px !important;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center; /* Centraliza o título */
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 10px; /* Espaço interno no corpo do card */
+}
+
+canvas {
+    width: 100% !important; /* Faz o canvas ocupar toda a largura do card */
+    height: 200px; /* Altura do gráfico */
+}
+
+iframe {
+    border-radius: 5px !important;
+}
+
+.dashboard-title {
+    
+}
+
+.first-row {
+    margin-bottom: 30px;
 }
