@@ -1,6 +1,6 @@
 # ORVALL
 
-![Header do Site](www/images/orvall-site.png)
+![Header do Site](www/images/orvallsite.png)
 
 ## Instalação
 Rode o comando:
