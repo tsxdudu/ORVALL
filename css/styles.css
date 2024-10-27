@@ -260,46 +260,43 @@ nav {
 }
 
 
-.card {
+.plans .card {
     background-color: rgb(221, 219, 215);
     padding: 5vh 0;
-    border-radius: 2em;
+    border-radius: 10px;
     margin: 10px;
     height: fit-content;
     border: none;
 }
 
-.card .card-footer {
+.plans .card .card-footer {
     border: none;
     background-color: transparent;
 }
 
-.card-body {
-    height: 300px;
+.plans .card-body {
+    /* Descomentar caso queira fixar o tamanho do card de plano */
+    /* height: 300px; */
 }
 
-.card-title {
+.plans .card-title {
     padding-bottom: 10px;
 }
 
-.gold {
-    background-color: #ffd700;
+.plans .card-featured {
+    background-color: rgb(37, 37, 37);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) !important;
 }
 
-.prata {
-    background-color: #a39f9f;
-}
-
-.bronze {
-    background-color: rgb(175, 147, 109);
-}
-
-.price {
+.plans .price {
     padding: 0;
 }
 
-.font {
-    font-size: 4rem;
+.title {
+    font-size: 3em;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 footer {
