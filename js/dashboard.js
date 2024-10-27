@@ -34,7 +34,7 @@ fetch(url)
   });
 
 var map = L.map('map', {
-  center: [-25.32677857762768, -49.218576575247575], // São Paulo
+  center: [-25.32677857762768, -49.218576575247575],
   zoom: 10,
   zoomControl: true, // Desativa o controle de zoom
   dragging: false, // Desativa arrastar o mapa

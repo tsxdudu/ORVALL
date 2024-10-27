@@ -194,6 +194,7 @@ a.sidebar-link:hover {
     height: 500px;
     border-radius: 5px !important;
     margin-bottom: 10px;
+    z-index: 1;
 
 }
 
