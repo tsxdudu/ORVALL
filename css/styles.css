@@ -295,7 +295,7 @@ nav {
 
 .title {
     font-size: 3em;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 1em;
 }
 
@@ -338,3 +338,22 @@ footer .footer-title {
 }
 
 
+.services .row .box .border{
+    border-radius: 10px;
+}
+
+.home-p {
+    font-size: 18px;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+.plan-items {
+    margin: 30px;
+}
+
+#about li {
+    font-size: 18px;
+}
