@@ -353,3 +353,7 @@ section {
 #about li {
     font-size: 18px;
 }
+
+.jumbotron {
+    color: #e2dada;
+}
