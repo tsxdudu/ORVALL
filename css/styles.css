@@ -177,7 +177,9 @@ nav {
 }
 
 @media (max-width: 1366px) {
-
+    header {
+        height: 90px; 
+    }
 
     .container.content {
         margin-top: 110px;
