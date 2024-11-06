@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="page">
+        <div class="container" id="auth-section">
+            <div id="login-section">
+                <h2>Login</h2>
+                <p>Digite seus dados de acesso no campo abaixo.</p>
+                <label for="username">Usuário</label>
+                <input type="text" id="username" placeholder="Usuário" required>
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button class="btn" onclick="login()">Login</button>
+                <button class="btn" onclick="toggleForm()">Ainda não tem conta? Cadastre-se</button>
+            </div>
+
+            <div id="register-section" style="display: none;">
+                <h2>Cadastro</h2>
+                <p>Preencha os dados abaixo para criar sua conta.</p>
+                <label for="new-username">Novo Usuário</label>
+                <input type="text" id="new-username" placeholder="Novo Usuário" required>
+                <label for="new-password">Nova Senha</label>
+                <input type="password" id="new-password" placeholder="Nova Senha" required>
+                <button class="btn" onclick="register()">Cadastrar</button>
+                <button class="btn" onclick="toggleForm()">Já tem uma conta? Faça login</button>
+            </div>
+        </div>
+        
+        <button id="logout-button" onclick="logout()" style="display: none;">Sair</button>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>

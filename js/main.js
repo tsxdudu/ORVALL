@@ -40,3 +40,33 @@ document.addEventListener("DOMContentLoaded", function() {
     checkFadeIn();
   });
   
+
+
+
+  
+function checkLoginStatus() {
+  const loginButton = document.getElementById('login-button');
+  const loginLink = document.getElementById('login-link');
+
+  
+  const userLoggedIn = localStorage.getItem('userLoggedIn');
+
+  if (userLoggedIn) {
+      
+      loginButton.textContent = 'Logout';
+      loginLink.setAttribute('href', 'index.html'); 
+
+      
+      loginButton.addEventListener('click', function() {
+          localStorage.removeItem('userLoggedIn');
+          window.location.href = 'index.html';
+      });
+  } else {
+      
+      loginButton.textContent = 'Login';
+      loginLink.setAttribute('href', 'login.html');
+  }
+}
+
+
+document.addEventListener('DOMContentLoaded', checkLoginStatus);
