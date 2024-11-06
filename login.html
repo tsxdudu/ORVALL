@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
     <title>Login</title>
 </head>
-<body>
-    <div class="page">
-        <div class="container" id="auth-section">
-            <div id="login-section">
-                <h2>Login</h2>
-                <p>Digite seus dados de acesso no campo abaixo.</p>
-                <label for="username">Usuário</label>
-                <input type="text" id="username" placeholder="Usuário" required>
-                <label for="password">Senha</label>
-                <input type="password" id="password" placeholder="Senha" required>
-                <button class="btn" onclick="login()">Login</button>
-                <button class="btn" onclick="toggleForm()">Ainda não tem conta? Cadastre-se</button>
-            </div>
 
-            <div id="register-section" style="display: none;">
-                <h2>Cadastro</h2>
-                <p>Preencha os dados abaixo para criar sua conta.</p>
-                <label for="new-username">Novo Usuário</label>
-                <input type="text" id="new-username" placeholder="Novo Usuário" required>
-                <label for="new-password">Nova Senha</label>
-                <input type="password" id="new-password" placeholder="Nova Senha" required>
-                <button class="btn" onclick="register()">Cadastrar</button>
-                <button class="btn" onclick="toggleForm()">Já tem uma conta? Faça login</button>
+<body class="d-flex justify-content-center align-items-center min-vh-100 bg-dark text-light">
+    <div class="container">
+        <!-- Contêiner para exibir mensagens de alerta -->
+        
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card p-4 shadow-sm">
+                    <div id="login-section">
+                        <h2 class="text-center">Login</h2>
+                        <p class="text-center text-muted">Digite seus dados de acesso no campo abaixo.</p>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Usuário</label>
+                            <input type="text" id="username" class="form-control" placeholder="Usuário" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Senha</label>
+                            <input type="password" id="password" class="form-control" placeholder="Senha" required>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="login()">Login</button>
+                    </div>
+
+                    <div id="register-section" style="display: none;">
+                        <h2 class="text-center">Cadastro</h2>
+                        <p class="text-center text-muted">Preencha os dados abaixo para criar sua conta.</p>
+                        <div class="mb-3">
+                            <label for="new-username" class="form-label">Novo Usuário</label>
+                            <input type="text" id="new-username" class="form-control" placeholder="Novo Usuário"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="new-password" class="form-label">Nova Senha</label>
+                            <input type="password" id="new-password" class="form-control" placeholder="Nova Senha"
+                                required>
+                        </div>
+                        <button class="btn btn-dark w-100" onclick="register()">Cadastrar</button>
+                        <button class="btn btn-link w-100 mt-2" onclick="toggleForm()">Já tem uma conta? Faça
+                            login</button>
+                    </div>
+                </div>
+                <div id="alert-container" class="mt-3"></div>
             </div>
         </div>
-        
-        <button id="logout-button" onclick="logout()" style="display: none;">Sair</button>
+        <button id="logout-button" class="btn btn-danger mt-3" onclick="logout()" style="display: none;">Sair</button>
+    </div>
+
+    <button id="logout-button" class="btn btn-danger mt-3" onclick="logout()" style="display: none;">Sair</button>
     </div>
 
     <script src="./js/login.js"></script>
 </body>
+
 </html>
